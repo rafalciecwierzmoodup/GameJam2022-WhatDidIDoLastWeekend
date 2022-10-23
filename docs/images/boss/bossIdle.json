@@ -1,0 +1,55 @@
+{"frames": {
+
+"bossIdle0.png":
+{
+	"frame": {"x":44,"y":1,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":9,"w":39,"h":35},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossIdle1.png":
+{
+	"frame": {"x":44,"y":1,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":9,"w":39,"h":35},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossIdle2.png":
+{
+	"frame": {"x":1,"y":1,"w":41,"h":34},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":10,"w":41,"h":34},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossIdle3.png":
+{
+	"frame": {"x":126,"y":1,"w":39,"h":34},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":10,"w":39,"h":34},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossIdle4.png":
+{
+	"frame": {"x":85,"y":1,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":9,"w":39,"h":35},
+	"sourceSize": {"w":50,"h":50}
+}},
+"animations": {
+	"bossIdle": ["bossIdle0.png","bossIdle1.png","bossIdle2.png","bossIdle3.png","bossIdle4.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bossIdle.png",
+	"format": "RGBA8888",
+	"size": {"w":166,"h":37},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:9f95e688101f7a1011cc2e94bad2032a:fb7dbd422006760d749e67740447f6e7:76a61b5c43001770c4ccc6cee8a7d9c3$"
+}
+}

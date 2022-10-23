@@ -1,0 +1,39 @@
+{"frames": {
+
+"bossHit0.png":
+{
+	"frame": {"x":1,"y":85,"w":46,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":1,"w":46,"h":43},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossHit1.png":
+{
+	"frame": {"x":1,"y":1,"w":49,"h":39},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":4,"w":49,"h":39},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossHit2.png":
+{
+	"frame": {"x":1,"y":42,"w":48,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":3,"w":48,"h":41},
+	"sourceSize": {"w":50,"h":50}
+}},
+"animations": {
+	"bossHit": ["bossHit0.png","bossHit1.png","bossHit2.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bossHit.png",
+	"format": "RGBA8888",
+	"size": {"w":51,"h":129},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:74c26aca19b66de971b27ecdbc303035:a526d9842ffc28b373d742f759513a35:d259494a6c428a296b3f8d560fc4eff2$"
+}
+}
