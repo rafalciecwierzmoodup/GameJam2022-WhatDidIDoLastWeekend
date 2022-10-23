@@ -230,7 +230,6 @@ export default class Game {
             bolt.update();
             if (this.hero) {
                 if (collisionDetection(bolt, this.hero)) {
-                    console.log('Hero has been hit');
                     this.pixi.stage.removeChild(this.bolts[i]);
                     this.bolts.splice(i, 1);
                     this.heroLives -= 1;
@@ -424,8 +423,13 @@ export default class Game {
             sound.stopAll();
             sound.play('gameOver');
 
+            let msg = 'No high score to beat.';
+            if (this.highScore !== 0) {
+                msg = `High score: ${this.highScore} sec.`
+            }
+
             this.menu = new Menu(this.pixi, {
-                title: `You lost, but fear not! You can do better! \n                High score: ${this.highScore} sec.`,
+                title: `You lost, but fear not! You can do better! \n${msg}`,
                 buttonText: 'Click here to try again',
                 titleFontSize: 16
             });
@@ -439,8 +443,6 @@ export default class Game {
             let highScoreMsg = '';
 
             if (isHighScore(playTime)) {
-                console.log('HIGH SCORE');
-                console.log(playTime + ' seconds');
                 setHighScore(playTime)
                 this.highScore = playTime;
                 highScoreMsg = `You have set a high score with ${playTime} sec!`

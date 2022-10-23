@@ -7,6 +7,10 @@ export const getHighScore = () => {
 export const isHighScore = (score: number) => {
     const highScore = getHighScore();
 
+    if (highScore === 0) {
+        return true;
+    }
+
     return score < highScore;
 }
 
