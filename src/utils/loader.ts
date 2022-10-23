@@ -9,12 +9,6 @@ const loadGameAssets = () => {
     loadDialogBox(loader);
     loadBulletsAssets(loader);
     loadHudAssets(loader);
-
-    // loadMapAssets(loader);
-    // loaderGuiAssets(loader);
-    // loadKnightAssets(loader);
-    // loadFoodAssets(loader);
-    // loadPigeonAssets(loader);
     loadMusic(loader);
 
     const progressLabel = document.getElementById('progress');
@@ -23,7 +17,6 @@ const loadGameAssets = () => {
         if (progressLabel) {
             progressLabel.textContent = loader.progress.toFixed(2).toString();
         }
-        console.log(loader.progress)
     }
     );
 
@@ -57,18 +50,6 @@ const loadBulletsAssets = (loader: PIXI.Loader) => {
 const loadHudAssets = (loader: PIXI.Loader) => {
     loader.add('heart', `images/hud/heart.json`);
 }
-
-
-
-// const loadFoodAssets = (loader: PIXI.Loader) => {
-//     loader.add('pretzel', 'images/food/pretzel.png');
-//     loader.add('peach', 'images/food/peach.png');
-// }
-
-// const loaderGuiAssets = (loader: PIXI.Loader) => {
-//     loader.add('heart0', 'images/gui/heart0.png');
-//     loader.add('heart1', 'images/gui/heart1.png');
-// }
 
 const loadMusic = (loader: PIXI.Loader) => {
     loader.add('bgSound', 'music/1 - Adventure Begin.ogg');

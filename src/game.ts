@@ -64,27 +64,21 @@ export default class Game {
         this.pixi = new PIXI.Application({ width, height, antialias: true });
         document.body.appendChild(this.pixi.view);
 
+        // GET HIGH SCORE FROM LOCAL STORAGE
         this.highScore = getHighScore();
 
         // INITIALIZE LOADER
         this.loader = loadGameAssets();
         this.loader.load(this.doneLoading.bind(this))
-
-        // GET HIGH SCORE FROM LOCAL STORAGE
-        // this.highScore = getHighScore();
     }
 
 
     doneLoading(loader: any, resources: any) {
-        console.log('DOne loading');
-
         // Delete loading information
         const progressContainer = document.getElementById('progressContainer');
         if (progressContainer) {
             progressContainer.style.display = 'none';
         }
-        console.log(resources);
-
 
         this.map = new Map(resources.mapStart.texture);
         this.pixi.stage.addChild(this.map);
