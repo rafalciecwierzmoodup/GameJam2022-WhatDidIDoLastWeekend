@@ -1,6 +1,6 @@
 {
   "name": "gamejam2022-whatdididolastweekend",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Game for hackaton",
   "main": "index.js",
   "scripts": {

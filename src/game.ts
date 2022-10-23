@@ -62,6 +62,8 @@ export default class Game {
 
     constructor(width: number, height: number) {
         this.pixi = new PIXI.Application({ width, height, antialias: true });
+        this.pixi.ticker.maxFPS = 60;
+
         document.body.appendChild(this.pixi.view);
 
         // GET HIGH SCORE FROM LOCAL STORAGE
