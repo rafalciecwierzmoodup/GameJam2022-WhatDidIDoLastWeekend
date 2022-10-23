@@ -1,6 +1,5 @@
 import * as PIXI from 'pixi.js';
 
-
 export default class Hero extends PIXI.AnimatedSprite {
     heroTextures: heroTextures = {
         down: [],
@@ -10,17 +9,16 @@ export default class Hero extends PIXI.AnimatedSprite {
     };
 
     speed: number = 3;
+    isIdle: boolean = false;
+    direction: 'up' | 'left' | 'right' | 'down' = 'right';
 
-    isIdle: boolean = true;
-
-    direction: 'up' | 'left' | 'right' | 'down' = 'down';
-
-    constructor(texture: any) {
+    constructor(texture: Array<PIXI.Texture>) {
         super(texture);
+
+        // Assing textures
         this.parseTextures(texture);
 
         this.animationSpeed = 0.1;
-        this.play();
 
         window.addEventListener("keydown", (e: KeyboardEvent) => this.onKeyDown(e));
         window.addEventListener("keyup", (e: KeyboardEvent) => this.onKeyUp(e));;
@@ -32,12 +30,20 @@ export default class Hero extends PIXI.AnimatedSprite {
                 this.x -= this.speed;
             } else if (this.direction === 'right' && this.x < 500 - this.width) {
                 this.x += this.speed;
-            } else if (this.direction === 'up' && this.y > 0) {
+            } else if (this.direction === 'up' && this.y > 16 * 3) {
                 this.y -= this.speed;
-            } else if (this.direction === 'down' && this.y < 320 - this.width) {
+            } else if (this.direction === 'down' && this.y < 320 - this.width - 3 * 16) {
                 this.y += this.speed;
             }
         }
+    }
+
+    resetState() {
+        this.x = - 16 * 2;
+        this.y = 150;
+        this.direction = 'right';
+        this.isIdle = true;
+        this.textures = this.heroTextures.right;
     }
 
     onKeyDown(e: KeyboardEvent): void {
@@ -84,10 +90,6 @@ export default class Hero extends PIXI.AnimatedSprite {
     onKeyUp(e: KeyboardEvent): void {
         this.isIdle = true;
         this.textures = [this.heroTextures[this.direction][0]];
-        // if (this.direction !== 'idle') {
-        //     this.textures = this.heroTextures.idle;
-        //     this.direction = 'idle';
-        // };
     }
 
     parseTextures(textures: Array<PIXI.Texture>) {

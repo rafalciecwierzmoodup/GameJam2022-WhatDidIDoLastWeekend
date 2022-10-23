@@ -3,7 +3,12 @@ import * as PIXI from 'pixi.js';
 const loadGameAssets = () => {
     const loader = PIXI.Loader.shared;
 
-    loadHeroAssets(loader)
+    loadHeroAssets(loader);
+    loadBossAssets(loader);
+    loadMapAssets(loader);
+    loadDialogBox(loader);
+    loadBulletsAssets(loader);
+    loadHudAssets(loader);
 
     // loadMapAssets(loader);
     // loaderGuiAssets(loader);
@@ -13,16 +18,10 @@ const loadGameAssets = () => {
     loadMusic(loader);
 
     const progressLabel = document.getElementById('progress');
-    const progressContainer = document.getElementById('progressContainer');
 
     loader.onProgress.add((loader) => {
         if (progressLabel) {
-            progressLabel.textContent = loader.progress.toString();
-        }
-        if (loader.progress === 100) {
-            if (progressContainer) {
-                progressContainer.style.display = 'none'
-            }
+            progressLabel.textContent = loader.progress.toFixed(2).toString();
         }
         console.log(loader.progress)
     }
@@ -34,20 +33,32 @@ const loadGameAssets = () => {
 
 const loadHeroAssets = (loader: PIXI.Loader) => {
     loader.add('heroSheet', `images/hero/hero.json`);
-
-    console.log(loader.resources);
-
 }
 
-// const loadPigeonAssets = (loader: PIXI.Loader) => {
-//     for (let i = 0; i < 4; i++) {
-//         loader.add(`pigeon${i}`, `images/pigeon/pigeon${i}.png`);
-//     };
-// }
+const loadMapAssets = (loader: PIXI.Loader) => {
+    loader.add('mapStart', 'images/maps/mapStart.png');
+}
 
-// const loadMapAssets = (loader: PIXI.Loader) => {
-//     loader.add('map', 'images/maps/map.png');
-// }
+const loadBossAssets = (loader: PIXI.Loader) => {
+    loader.add('bossIdle', `images/boss/bossIdle.json`);
+    loader.add('bossWalk', `images/boss/bossWalk.json`);
+    loader.add('bossHit', `images/boss/bossHit.json`);
+}
+
+const loadDialogBox = (loader: PIXI.Loader) => {
+    loader.add('dialogBox', 'images/dialog/dialogBox.png');
+}
+
+const loadBulletsAssets = (loader: PIXI.Loader) => {
+    loader.add('shuriken', 'images/items/shuriken.png');
+    loader.add('bolt', 'images/items/bolt.png');
+}
+
+const loadHudAssets = (loader: PIXI.Loader) => {
+    loader.add('heart', `images/hud/heart.json`);
+}
+
+
 
 // const loadFoodAssets = (loader: PIXI.Loader) => {
 //     loader.add('pretzel', 'images/food/pretzel.png');
@@ -61,6 +72,11 @@ const loadHeroAssets = (loader: PIXI.Loader) => {
 
 const loadMusic = (loader: PIXI.Loader) => {
     loader.add('bgSound', 'music/1 - Adventure Begin.ogg');
+    loader.add('fightOneSound', 'music/24 - Final Area.ogg');
+    loader.add('hit', 'music/Hit.wav');
+    loader.add('heroHit', 'music/Kill.wav');
+    loader.add('gameOver', 'music/GameOver.wav');
+    loader.add('gameWon', 'music/15 - Credit Theme.ogg');
 }
 
 export default loadGameAssets;

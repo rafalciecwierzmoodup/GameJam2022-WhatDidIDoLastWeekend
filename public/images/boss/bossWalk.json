@@ -1,0 +1,63 @@
+{"frames": {
+
+"bossWalk0.png":
+{
+	"frame": {"x":1,"y":1,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":9,"w":39,"h":35},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossWalk1.png":
+{
+	"frame": {"x":163,"y":1,"w":36,"h":38},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":6,"w":36,"h":38},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossWalk2.png":
+{
+	"frame": {"x":83,"y":1,"w":38,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":7,"w":38,"h":36},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossWalk3.png":
+{
+	"frame": {"x":42,"y":1,"w":39,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":9,"w":39,"h":35},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossWalk4.png":
+{
+	"frame": {"x":203,"y":1,"w":36,"h":38},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":6,"w":36,"h":38},
+	"sourceSize": {"w":50,"h":50}
+},
+"bossWalk5.png":
+{
+	"frame": {"x":123,"y":1,"w":38,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":7,"w":38,"h":36},
+	"sourceSize": {"w":50,"h":50}
+}},
+"animations": {
+	"bossWalk": ["bossWalk0.png","bossWalk1.png","bossWalk2.png","bossWalk3.png","bossWalk4.png","bossWalk5.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bossWalk.png",
+	"format": "RGBA8888",
+	"size": {"w":242,"h":38},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:bcac2165923e57c63eaf7ee4be6576e5:29e011696de81d02801c18754f1dca18:683f49d4a0c73c722d5f726e7ecca5b5$"
+}
+}
